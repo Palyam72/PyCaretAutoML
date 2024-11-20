@@ -2,7 +2,7 @@
 python_version >= 3.11, < 3.12
 
 # PyCaret and its dependencies
-pycaret==3.0.5
+pycaret
 
 # Essential libraries
 streamlit==1.25.0
