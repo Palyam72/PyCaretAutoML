@@ -1,3 +1,17 @@
-# Specify Python version
-python_version == 3.11.9
-pycaret
+# Specify Python version greater than 3.11, compatible with PyCaret
+python_version >= 3.11, < 3.12
+
+# PyCaret and its dependencies
+pycaret==3.0.5
+
+# Essential libraries
+streamlit==1.25.0
+pandas==2.1.2
+numpy==1.26.0
+scikit-learn==1.4.1
+matplotlib==3.8.1
+seaborn==0.13.0
+
+# ML and data science libraries
+xgboost==1.7.6
+lightgbm==4.0.0
