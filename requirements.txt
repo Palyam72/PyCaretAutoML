@@ -2,3 +2,4 @@ pycaret
 streamlit
 streamlit-option-menu
 chardet
+ydata-profilling
