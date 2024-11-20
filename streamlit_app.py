@@ -2,8 +2,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import chardet
 import pandas as pd
-#from ydata_profiling import ProfileReport
-#from streamlit_pandas_profiling import st_profile_report
 from pycaret.regression import (
     setup as reg_setup, compare_models as reg_compare, 
     create_model as reg_create, pull as reg_pull, 
