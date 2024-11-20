@@ -1,1 +1,3 @@
-
+# Specify Python version
+python_version == 3.11.9
+pycaret
