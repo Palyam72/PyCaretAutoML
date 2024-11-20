@@ -2,8 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import chardet
 import pandas as pd
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+#from ydata_profiling import ProfileReport
+#from streamlit_pandas_profiling import st_profile_report
 from pycaret.regression import (
     setup as reg_setup, compare_models as reg_compare, 
     create_model as reg_create, pull as reg_pull, 
@@ -261,7 +261,7 @@ with st.sidebar:
     # Option menu for Machine Learning choices
     ml_menu = option_menu(
         "Machine Learning",
-        options=["Regression", "Time-series", "Classification", "Clustering", "Anomaly-Detection", "Profiling Dashboard", "Predictions"],
+        options=["Regression", "Time-series", "Classification", "Clustering", "Anomaly-Detection", "Predictions"],
         default_index=0,
         menu_icon="robot",
     )
@@ -274,15 +274,6 @@ if df is not None:
         st.session_state.dataset = df
         regression_object = Regression(st.session_state.dataset)
         regression_object.layout()
-        
-    elif ml_menu == "Profiling Dashboard":
-        st.subheader("Profiling Dashboard")
-        try:
-            profile = ProfileReport(df, explorative=True)
-            st_profile_report(profile)
-        except Exception as e:
-            st.error("Error generating the profiling report.")
-            st.error(f"Error details: {e}")
             
     elif ml_menu == "Predictions":
         st.subheader("Predictions")
