@@ -1,3 +1,4 @@
 pycaret
 streamlit
 streamlit-option-menu
+chardet
