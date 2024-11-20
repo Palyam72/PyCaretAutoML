@@ -2,4 +2,5 @@ pycaret
 streamlit
 streamlit-option-menu
 chardet
-pandas-profilling
+ydata-profiling==4.6.0
+
