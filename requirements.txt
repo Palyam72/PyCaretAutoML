@@ -1,5 +1,5 @@
 # Specify Python version greater than 3.11, compatible with PyCaret
-python_version >= 3.11, < 3.12
+python >= 3.11, < 3.12
 
 # PyCaret and its dependencies
 pycaret
