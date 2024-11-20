@@ -2,5 +2,5 @@ pycaret
 streamlit
 streamlit-option-menu
 chardet
-ydata-profiling==4.6.0
+ydata-profiling==4.9.0
 
