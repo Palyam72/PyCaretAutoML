@@ -7,7 +7,10 @@ from CLASSIFICATION import *
 # Initialize session state
 if "dataset" not in st.session_state:
     st.session_state["dataset"] = None
-    
+classificationList = ["setup_cls","create_cls_df", "create_cls","predict_cls","predict_cls_df", "ensemble_cls","ensemble_cls_df", "tune_cls","tune_cls_df", "save_create_cls", "save_enseble_cls", "save_tune_cls"]
+for i in classificationList:
+    if i not in st.session_state:
+        st.session_state[i] = None
 with st.sidebar:
     uploaded_file = st.file_uploader("Upload CSV file", type="csv")
     df = None
