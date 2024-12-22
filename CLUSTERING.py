@@ -124,7 +124,7 @@ class Clustering:
             else:
                 st.warning("No model available to save.")
         elif choose_model_to_save == "Ensembled Model":
-            if st.session_state.ensemble_reg is not None:
+            if st.session_state.ensemble_clus is not None:
                 if st.toggle("Provide a custom name for the ensemble model"):
                     name_ensemble = st.text_input("Enter ensemble model name")
                     if name_ensemble:
