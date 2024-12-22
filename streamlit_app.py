@@ -7,6 +7,7 @@ from CLASSIFICATION import Classification
 from REGRESSION import Regression
 from TIMESERIES import TimeSeries
 from CLUSTERING import Clustering
+from ANAMOLY import Anamoly
 
 # Initialize session state
 if "dataset" not in st.session_state:
@@ -46,6 +47,9 @@ elif ml_menu == "Time-series" and st.session_state.dataset is not None:
 elif ml_menu == "Clustering":
     clustering_instance = Clustering(st.session_state.dataset)
     clustering_instance.run_app()
+elif ml_menu=="Anomaly Detection":
+    anamoly_instance=Anamoly(st.session_state.dataset)
+    anamoly_instance.run_app()
     
 else:
     st.info("Please upload a dataset to proceed")
