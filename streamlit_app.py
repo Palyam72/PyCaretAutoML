@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import chardet
 import pandas as pd
-from classification import Classification
+from CLASSIFICATION import Classification
 
 # Initialize session state
 if "dataset" not in st.session_state:
