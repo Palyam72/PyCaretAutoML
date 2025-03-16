@@ -5,9 +5,7 @@ import chardet
 import pandas as pd
 from CLASSIFICATION import Classification
 from REGRESSION import Regression
-from TIMESERIES import TimeSeries
 from CLUSTERING import Clustering
-from ANAMOLY import Anamoly
 
 # Initialize session state
 if "dataset" not in st.session_state:
@@ -30,7 +28,7 @@ with st.sidebar:
 
     ml_menu = option_menu(
         "Machine Learning",
-        options=["Regression", "Time-series", "Classification", "Clustering", "Anomaly Detection", "Predictions"],
+        options=["Regression", "Classification", "Clustering"],
         default_index=0,
         menu_icon="robot",
     )
@@ -41,15 +39,9 @@ if ml_menu == "Classification" and st.session_state.dataset is not None:
 elif ml_menu == "Regression" and st.session_state.dataset is not None:
     regression_instance = Regression(st.session_state.dataset)
     regression_instance.run_app()
-elif ml_menu == "Time-series" and st.session_state.dataset is not None:
-    time_series_instance = TimeSeries(st.session_state.dataset)
-    time_series_instance.run_app()
 elif ml_menu == "Clustering":
     clustering_instance = Clustering(st.session_state.dataset)
     clustering_instance.run_app()
-elif ml_menu=="Anomaly Detection":
-    anamoly_instance=Anamoly(st.session_state.dataset)
-    anamoly_instance.run_app()
     
 else:
     st.info("Please upload a dataset to proceed")
